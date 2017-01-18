@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const autoPrefixer = require('autoprefixer');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -7,7 +8,7 @@ module.exports = {
   context: __dirname,
     devtool: 'eval-source-map',
     entry:{
-      app: ['./src/main.ts']
+      'app': './src/main.ts'
     },
     output: {
       path: root('/dist'),
@@ -113,7 +114,7 @@ module.exports = {
                     failOnHint: false
                 },
                 postcss: [
-                    autoprefixer({
+                    autoPrefixer({
                         browsers: ['last 2 version']
                     })
                 ]
@@ -128,6 +129,7 @@ module.exports = {
     devServer: {
         hot: true,
         contentBase: root('/dist'),
+        port: 9000,
         inline: true,
         stats: 'verbose',
         watchOptions: {
