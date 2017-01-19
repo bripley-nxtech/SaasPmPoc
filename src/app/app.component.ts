@@ -1,11 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app',//<app></app>
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    selector: 'app',
+    styleUrls: ['./app.component.css'],
+    templateUrl: './app.component.html'
 })
 
 export class AppComponent {
     title = 'Angular 2 Proof Of Concept';
+    @Input() newTitle: string;
+
+    updateTitle() {
+        this.title = this.newTitle;
+    }
 }
