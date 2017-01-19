@@ -2,7 +2,7 @@
 Seed Project for Angular 2 and Webpack
 
 ## Commands:
-    1. **npm start** - This is for local development. It will bundle the app and turn on the webpack-dev-server and also enable hot module replacement
+    1. *npm start* - This is for local development. It will bundle the app and turn on the webpack-dev-server and also enable hot module replacement
        to allow for continuous development without having to worry to refresh the browser
     2. **npm test** - This is for local testing. It will compile the app and run the unit test as well as watch any changes that might take place to the unit test
        if changes are made it will recompile and re-run the test
